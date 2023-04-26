@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse Name</title>
+</head>
+<body>
+	<label for="nameInput">Enter your name:</label>
+	<input type="text" id="nameInput">
+	<button onclick="reverseName()">Reverse Name</button>
+	<div id="output"></div>
+
+	<script>
+		function reverseName() {
+			let name = document.getElementById("nameInput").value;
+			let reversedName = name.split("").reverse().join("");
+			let output = document.getElementById("output");
+			output.innerHTML = "";
+			for (let i = 0; i < 10; i++) {
+				output.innerHTML += reversedName + "<br>";
+			}
+		}
+	</script>
+</body>
+</html>
